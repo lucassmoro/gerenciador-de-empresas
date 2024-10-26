@@ -1,4 +1,4 @@
-package empresa.emp;
+package empresa;
 
 import java.io.Serializable;
 import java.time.LocalDate;
