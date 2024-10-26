@@ -1,4 +1,4 @@
-package empresa.emp;
+package empresa;
 /**
  *
  * @author Lucas
