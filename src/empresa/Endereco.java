@@ -24,8 +24,8 @@ public class Endereco implements Serializable {
             this.rua=rua;
             this.numero=numero;
         }
-
-    @Override
+        
+        @Override
         public String toString() {
             return getCidade() + ", Rua "+ getRua() + ", " + getNumero();
         }

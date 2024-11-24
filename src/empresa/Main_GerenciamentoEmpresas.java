@@ -8,14 +8,13 @@ package empresa;
  *
  * @author Lucas
  */
-import java.util.Scanner;
 
 public class Main_GerenciamentoEmpresas {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         TelaInterativa tela = new TelaInterativa();
-        
+                
         tela.BoasVindas();
         
         tela.entradaDeDadosEmpresa();

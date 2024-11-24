@@ -14,13 +14,13 @@ import java.util.Date;
  */
 public class Funcionario extends Pessoa implements Serializable{
     
-    private Integer baseSalary;
+    private Double baseSalary;
     private Cargos cargo;
     private Date dataAdmissao;
     
     
     public Funcionario(String nome, String sobrenome, String sexo,
-            String cpf,  LocalDate idade, Endereco endereco, Integer baseSalary, Cargos cargo) {
+            String cpf,  LocalDate idade, Endereco endereco, Double baseSalary, Cargos cargo) {
         
         super(nome, sobrenome, sexo, cpf, idade, endereco);
         this.baseSalary = baseSalary;
@@ -28,12 +28,16 @@ public class Funcionario extends Pessoa implements Serializable{
         this.dataAdmissao = new Date();
     }
     
-    public Integer getBaseSalary() {
+    public Double getBaseSalary() {
         return baseSalary;
     }
 
-    public void setBaseSalary(Integer baseSalary) {
-        this.baseSalary = baseSalary;
+    public void setFuncionarioSalary(Double baseSalary, Gerente gerente, String senha) {
+        if (senha.equals(gerente.getId())) { // ajustar para novas classes futuras
+            this.baseSalary = baseSalary;
+        } else {
+            throw new SecurityException("ACESSO NEGADO");
+        }
     }
     
     public Cargos getCargo() {
